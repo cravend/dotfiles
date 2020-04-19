@@ -1,6 +1,6 @@
 alias ..="cd ..";
 alias ...="cd ../..";
-alias ls="ls -GhF --color"
+alias ls="ls -GhF"
 alias aliases="vim ~/.custom_aliases && . ~/.custom_aliases"
 
 function chpwd() { ls }

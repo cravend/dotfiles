@@ -10,7 +10,8 @@ zstyle ':vcs_info:git:*' formats ' (%b)'
 
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
-PROMPT='%{$fg_bold[red]%}%n%{$reset_color%}:'
+PROMPT='%{$fg_bold[red]%}%n'
+PROMPT+='%{$fg[yellow]%}@%m%{$reset_color%}:'
 PROMPT+='%{$fg_bold[blue]%}%~%{$reset_color%}'
 PROMPT+='%{$fg_bold[green]%}${vcs_info_msg_0_}%{$reset_color%} %# '
 
@@ -41,7 +42,6 @@ zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
