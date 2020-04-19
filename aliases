@@ -3,8 +3,4 @@ alias ...="cd ../..";
 alias ls="ls -GhF"
 alias aliases="vim ~/.custom_aliases && . ~/.custom_aliases"
 
-function cd() {
-  builtin cd "$@" && ls
-}
-
 function chpwd() { ls }
