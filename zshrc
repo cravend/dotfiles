@@ -19,7 +19,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && \
   source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Add aliases
-test -e "${HOME}/.dotfiles/.aliases" && \
-  source "${HOME}/.dotfiles/.aliases"
+test -e "${HOME}/.dotfiles/aliases" && \
+  source "${HOME}/.dotfiles/aliases"
 test -e "${HOME}/.custom_aliases" && \
   source "${HOME}/.custom_aliases"

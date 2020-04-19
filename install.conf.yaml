@@ -10,4 +10,3 @@
     ~/.gitconfig: gitconfig
     ~/.prettierrc: prettierrc
     ~/.vimrc: vimrc
-    ~/.zshrc_default: zshrc
