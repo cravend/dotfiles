@@ -5,7 +5,6 @@
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: ''
     ~/.aliases: aliases
     ~/.gitconfig: gitconfig
     ~/.prettierrc: prettierrc
