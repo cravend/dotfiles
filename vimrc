@@ -28,8 +28,13 @@ set number
 set colorcolumn=80
 syntax on
 
-set background=light
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
 set hls is
+
 let &t_SI = "\<Esc>]1337;CursorShape=1\x7"
 let &t_EI = "\<Esc>]1337;CursorShape=0\x7"
 
