@@ -1,3 +1,7 @@
 [user]
 	name = Dalton
 	email = 20dalton00@gmail.com
+[help]
+    autocorrect = 10
+[init]
+	defaultBranch = main
