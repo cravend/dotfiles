@@ -1,7 +1,16 @@
 [user]
-	name = Dalton
+	name = Dalton Craven
 	email = 20dalton00@gmail.com
+	signingKey = E31DA1D42656079B12BC489674585B6E8F26D513
 [help]
     autocorrect = 10
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
+[core]
+	ignorecase = false
+[commit]
+	gpgsign = true
+[tag]
+	forceSignAnnotated = true
