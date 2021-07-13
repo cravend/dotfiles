@@ -7,5 +7,4 @@
 - link:
     ~/.aliases: aliases
     ~/.gitconfig: gitconfig
-    ~/.prettierrc: prettierrc
     ~/.vimrc: vimrc
