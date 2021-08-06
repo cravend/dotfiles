@@ -5,6 +5,9 @@
 - clean: ['~']
 
 - link:
-    ~/.aliases: aliases
-    ~/.gitconfig: gitconfig
+    ~/.zshrc: zshrc
     ~/.vimrc: vimrc
+    ~/.gitconfig: gitconfig
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

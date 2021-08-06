@@ -1,56 +1,101 @@
-source "${HOME}/.dotfiles/zsh-defer/zsh-defer.plugin.zsh"
-# Allow colors in terminal
-zsh-defer autoload -U colors && zsh-defer colors
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Load version control information
-zsh-defer autoload -Uz vcs_info
-precmd() { zsh-defer vcs_info }
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.dotfiles/ohmyzsh
 
-# Format the vcs_info_msg_0_ variable
-zsh-defer zstyle ':vcs_info:git:*' formats ' (%b)'
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="cravend"
 
-# Set up the prompt (with git branch name)
-setopt PROMPT_SUBST
-PROMPT='%{$fg_bold[red]%}%n'
-PROMPT+='%{$fg[yellow]%}@%m%{$reset_color%}:'
-PROMPT+='%{$fg_bold[blue]%}%~%{$reset_color%}'
-PROMPT+='%{$fg_bold[green]%}${vcs_info_msg_0_}%{$reset_color%} %# '
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# Add iTerm2 integration
-zsh-defer -c 'test -e "${HOME}/.iterm2_shell_integration.zsh" && \
-  source "${HOME}/.iterm2_shell_integration.zsh"'
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-# Add aliases
-zsh-defer test -e "${HOME}/.dotfiles/aliases" && \
-  source "${HOME}/.dotfiles/aliases"
-zsh-defer test -e "${HOME}/.custom_aliases" && \
-  source "${HOME}/.custom_aliases"
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
 
-# add all the default suggested stuff
-zsh-defer setopt histignorealldups sharehistory
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
+# Uncomment the following line to automatically update without prompting.
+DISABLE_UPDATE_PROMPT="true"
 
-# Use modern completion system
-zsh-defer autoload -Uz compinit
-zsh-defer compinit
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-zsh-defer zstyle ':completion:*' auto-description 'specify: %d'
-zsh-defer zstyle ':completion:*' completer _expand _complete _correct _approximate
-zsh-defer zstyle ':completion:*' format 'Completing %d'
-zsh-defer zstyle ':completion:*' group-name ''
-zsh-defer zstyle ':completion:*' menu select=2
-zsh-defer zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zsh-defer zstyle ':completion:*' list-colors ''
-zsh-defer zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zsh-defer zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zsh-defer zstyle ':completion:*' menu select=long
-zsh-defer zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zsh-defer zstyle ':completion:*' use-compctl false
-zsh-defer zstyle ':completion:*' verbose true
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
 
-zsh-defer zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zsh-defer zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+ZSH_CUSTOM=$HOME/.dotfiles/custom
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git nvm pyenv yarn iterm2)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
