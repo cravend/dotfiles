@@ -6,6 +6,7 @@ filetype off
 
 " Load plugins here (vim-plug)
 call plug#begin('~/.vim/plugged')
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -17,7 +18,7 @@ syntax on
 filetype plugin indent on
 
 " TODO: Pick a leader key
-" let mapleader = ","
+let mapleader = ","
 
 " Security
 set modelines=0
@@ -47,10 +48,6 @@ set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim
 
-" Move up/down editor lines
-nnoremap j gj
-nnoremap k gk
-
 " Allow hidden buffers
 set hidden
 
@@ -79,37 +76,17 @@ inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
 
-" Textmate holdouts
-
 " Formatting
 map <leader>q gqip
 
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
-" Uncomment this to enable by default:
-" set list " To enable by default
-" Or use your leader key + l to toggle on/off
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
-let base16colorspace=256
-
-
-" ChangeBackground changes the background mode based on macOS's `Appearance`
-" setting. We also refresh the statusline colors to reflect the new mode.
-function! ChangeBackground()
-  if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-    set background=dark   " for the dark version of the theme
-    colorscheme tomorrow-night
-  else
-    set background=light  " for the light version of the theme
-    colorscheme tomorrow
-  endif
-
-  try
-    execute "AirlineRefresh"
-  catch
-  endtry
-endfunction
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 augroup cursor_behaviour
     autocmd!
@@ -125,5 +102,4 @@ augroup cursor_behaviour
     autocmd InsertEnter * set cursorline
     " turn off current line highlighting when leaving insert mode
     autocmd InsertLeave * set nocursorline
-
 augroup END
