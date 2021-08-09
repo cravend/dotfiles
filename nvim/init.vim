@@ -8,11 +8,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 call plug#end()
 
-source ~/.vimrc_background
 let base16colorspace=256
+source ~/.vimrc_background
 
 exec 'source' . stdpath('config') . '/defaults.vim'
 exec 'source' . stdpath('config') . '/coc.vim'
+exec 'source' . stdpath('config') . '/airline.vim'
 
 " Tab logic
 nnoremap <leader>1 1gt
@@ -30,7 +31,5 @@ nnoremap -  :tabfirst<CR>
 
 " Directory view
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 3
-let g:netrw_altv = 1
 let g:netrw_banner = 0
 
