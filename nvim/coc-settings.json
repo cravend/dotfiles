@@ -1,0 +1,5 @@
+{
+  "coc.preferences.jumpCommand": "tabe",
+  "eslint.packageManager": "yarn",
+  "eslint.autoFixOnSave": true
+}
