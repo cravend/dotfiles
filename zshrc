@@ -70,7 +70,7 @@ ZSH_CUSTOM=$HOME/.dotfiles/custom
 
 # Customize zsh-nvm lazy-loading
 export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim' 'nvim')
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim' 'nvim' 'git')
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
