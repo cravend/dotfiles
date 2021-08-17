@@ -10,9 +10,6 @@ export ZSH=$HOME/.dotfiles/ohmyzsh
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="cravend"
 
-AUTODARK_LIGHT_THEME="tomorrow"
-AUTODARK_DARK_THEME="tomorrow-night-eighties"
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -107,4 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Autodark Configuration
+AUTODARK_LIGHT_THEME="tomorrow"
+AUTODARK_DARK_THEME="tomorrow-night-eighties"
 
