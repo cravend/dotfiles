@@ -69,17 +69,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$HOME/.dotfiles/custom
 
-# Customize zsh-nvm lazy-loading
-export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('vim' 'nvim' 'git')
-
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git nvm pyenv yarn iterm2 base16-shell autodark)
-plugins=(base16-shell autodark git zsh-nvm yarn iterm2 pyenv)
+plugins=(base16-shell autodark git yarn iterm2 pyenv)
 
 source $ZSH/oh-my-zsh.sh
 
