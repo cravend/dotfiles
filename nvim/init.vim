@@ -50,3 +50,7 @@ let g:netrw_liststyle = 3
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 
+" Search
+map <C-f> /
+map <C-r> :%s/
+
