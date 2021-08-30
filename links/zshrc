@@ -10,6 +10,8 @@ export ZSH=$HOME/.dotfiles/zsh/ohmyzsh
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="cravend"
 
+ZSH_COMPDUMP="${ZSH_CACHE_DIR}/.zcompdump-${HOST/.*/}-${ZSH_VERSION}"
+
 # Autodark  Configuration -- must be loaded before plugin 
 AUTODARK_LIGHT_THEME="tomorrow"
 AUTODARK_DARK_THEME="tomorrow-night-eighties"
