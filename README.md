@@ -12,7 +12,7 @@ These are my personal dotfiles. I use a combination of git submodules & symlinks
 
 Several aspects are automatically installed via submodules, but a few manual requirements still exist:
 
-- [`zsh`](https://www.zsh.org) — My default terminal
+- [`zsh`](https://www.zsh.org) — My default shell
 - [`nvim`](https://github.com/neovim/neovim) — I didn't make my nvim config backwards compatible
 - [`exa`](https://github.com/ogham/exa) — Adds some pretty colors compared to `ls`
 - [`nerdfonts`](https://www.nerdfonts.com) — I use Anonymice for the custom icons
