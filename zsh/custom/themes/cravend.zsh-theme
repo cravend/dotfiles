@@ -1,5 +1,3 @@
-# Remote computer (shows hostname).
-
 autoload -Uz vcs_info
 autoload -U add-zsh-hook
 theme_precmd () { vcs_info }
