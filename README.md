@@ -21,6 +21,7 @@ Several aspects are automatically installed via submodules, but a few manual req
 
 - clone repository
 - run [`./utils/install`](utils/install)
+- run `:PlugInstall` inside nvim
 - done
 
 ### Things You Should Change
