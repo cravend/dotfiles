@@ -11,6 +11,3 @@
 [submodule "custom/plugins/autodark"]
 	path = custom/plugins/autodark
 	url = https://github.com/cravend/autodark
-[submodule "custom/plugins/zsh-nvm"]
-	path = custom/plugins/zsh-nvm
-	url = https://github.com/lukechilds/zsh-nvm
