@@ -12,5 +12,10 @@
 - shell:
     - command: git submodule update --init --recursive
       description: Installing submodules
+      quiet: true
     - command: curl -s https://get.volta.sh | bash
       description: Installing Volta
+      quiet: true
+    - command: curl -o ./zsh/custom/themes/cravend.zsh-theme https://raw.githubusercontent.com/cravend/theme/main/cravend.zsh-theme
+      description: Installing cravend.theme
+      quiet: true
