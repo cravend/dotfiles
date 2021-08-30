@@ -168,4 +168,4 @@ if [[ -o interactive ]]; then
   fi
 fi
 
-alias imgcat=/Users/cravend/.iterm2/imgcat;alias imgls=/Users/cravend/.iterm2/imgls;alias it2api=/Users/cravend/.iterm2/it2api;alias it2attention=/Users/cravend/.iterm2/it2attention;alias it2check=/Users/cravend/.iterm2/it2check;alias it2copy=/Users/cravend/.iterm2/it2copy;alias it2dl=/Users/cravend/.iterm2/it2dl;alias it2getvar=/Users/cravend/.iterm2/it2getvar;alias it2git=/Users/cravend/.iterm2/it2git;alias it2setcolor=/Users/cravend/.iterm2/it2setcolor;alias it2setkeylabel=/Users/cravend/.iterm2/it2setkeylabel;alias it2ul=/Users/cravend/.iterm2/it2ul;alias it2universion=/Users/cravend/.iterm2/it2universion
+alias imgcat=$HOME/.iterm2/imgcat;alias imgls=$HOME/.iterm2/imgls;alias it2api=$HOME/.iterm2/it2api;alias it2attention=$HOME/.iterm2/it2attention;alias it2check=$HOME/.iterm2/it2check;alias it2copy=$HOME/.iterm2/it2copy;alias it2dl=$HOME/.iterm2/it2dl;alias it2getvar=$HOME/.iterm2/it2getvar;alias it2git=$HOME/.iterm2/it2git;alias it2setcolor=$HOME/.iterm2/it2setcolor;alias it2setkeylabel=$HOME/.iterm2/it2setkeylabel;alias it2ul=$HOME/.iterm2/it2ul;alias it2universion=$HOME/.iterm2/it2universion
