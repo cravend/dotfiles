@@ -11,3 +11,6 @@
 [submodule "zsh/custom/plugins/base16-shell"]
 	path = zsh/custom/plugins/base16-shell
 	url = https://github.com/chriskempson/base16-shell
+[submodule "zsh/custom/plugins/zsh-z"]
+	path = zsh/custom/plugins/zsh-z
+	url = https://github.com/agkozak/zsh-z
