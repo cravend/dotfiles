@@ -19,3 +19,7 @@
     - command: curl -o ./zsh/custom/themes/cravend.zsh-theme https://raw.githubusercontent.com/cravend/theme/main/cravend.zsh-theme
       description: Installing cravend.theme
       quiet: true
+    - command: sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+      description: Installing Neovim
+      quiet: true
+
