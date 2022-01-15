@@ -1,7 +1,6 @@
 [submodule "utils/dotbot"]
 	path = utils/dotbot
 	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
 [submodule "zsh/ohmyzsh"]
 	path = zsh/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
