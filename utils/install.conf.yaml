@@ -8,6 +8,7 @@
     ~/.zshrc: links/zshrc
     ~/.gitconfig: links/gitconfig
     ~/.config/nvim: links/nvim
+    ~/Library/Preferences/com.googlecode.iterm2.plist: links/com.googlecode.iterm2.plist
 
 - shell:
     - command: git submodule update --init --recursive
