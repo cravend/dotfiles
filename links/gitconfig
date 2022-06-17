@@ -1,7 +1,7 @@
 [user]
 	name = Dalton Craven
 	email = daltoncraven@protonmail.com
-	signingKey = 37761C09C7AE1735CE022AC5FF3FA75081B3B98C
+	signingkey = C35AF75FF2D48E2F
 
 [help]
     autocorrect = 10
