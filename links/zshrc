@@ -44,8 +44,7 @@ if [[ -f "$HOME/.zshrc_custom" ]]; then
 fi
 
 # Custom paths
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+eval $(thefuck --alias)
 
 # Use GPG setup for SSHing
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
@@ -53,3 +52,9 @@ gpgconf --launch gpg-agent
 
 # Turn on ZSH
 source $ZSH/oh-my-zsh.sh
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
