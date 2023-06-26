@@ -36,7 +36,7 @@ ZSH_CUSTOM=$HOME/.dotfiles/zsh/custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(base16-shell autodark yarn iterm2 pyenv zsh-z)
+plugins=(base16-shell yarn iterm2 pyenv zsh-z)
 
 # Custom aliases
 if [[ -f "$HOME/.zshrc_custom" ]]; then
@@ -58,3 +58,15 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
+
+[ -f "/Users/cravend/.ghcup/env" ] && source "/Users/cravend/.ghcup/env" # ghcup-enveval "$(direnv hook bash)"
+
+# bun completions
+[ -s "/Users/cravend/.bun/_bun" ] && source "/Users/cravend/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
