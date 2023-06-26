@@ -43,13 +43,6 @@ if [[ -f "$HOME/.zshrc_custom" ]]; then
   source "$HOME/.zshrc_custom"
 fi
 
-# Custom paths
-eval $(thefuck --alias)
-
-# Use GPG setup for SSHing
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-
 # Turn on ZSH
 source $ZSH/oh-my-zsh.sh
 
@@ -57,10 +50,6 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-
 
 [ -f "/Users/cravend/.ghcup/env" ] && source "/Users/cravend/.ghcup/env" # ghcup-enveval "$(direnv hook bash)"
 
