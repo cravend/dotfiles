@@ -12,7 +12,6 @@ Plug 'https://github.com/github/copilot.vim'
 call plug#end()
 
 let base16colorspace=256
-source ~/.vimrc_background
 
 exec 'source' . stdpath('config') . '/defaults.vim'
 exec 'source' . stdpath('config') . '/coc.vim'
