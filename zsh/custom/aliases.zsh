@@ -1,6 +1,5 @@
 alias gca="git commit --amend"
-alias ls="exa -F --icons"
-alias exa="exa -F --icons"
+alias ls="eza -F -a"
 alias vim="nvim"
 
 # Git

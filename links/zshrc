@@ -9,7 +9,7 @@ ZSH_THEME="cravend"
 
 ZSH_COMPDUMP="${ZSH_CACHE_DIR}/.zcompdump-${HOST/.*/}-${ZSH_VERSION}"
 
-# Autodark Configuration -- must be loaded before plugin 
+# Autodark Configuration -- must be loaded before plugin
 AUTODARK_LIGHT_THEME="tomorrow"
 AUTODARK_DARK_THEME="tomorrow-night-eighties"
 
@@ -40,16 +40,56 @@ plugins=(yarn pyenv direnv)
 
 # Custom aliases
 if [[ -f "$HOME/.zshrc_custom" ]]; then
-  source "$HOME/.zshrc_custom"
+    source "$HOME/.zshrc_custom"
 fi
 
 export EDITOR=nvim
 
-# Turn on ZSH
-source $ZSH/oh-my-zsh.sh
-
+export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
+# Turn on ZSH
+source $ZSH/oh-my-zsh.sh
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Enable the virtualenv prompt
+VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# Custom function to show git branch and status
+git_prompt_info() {
+    local branch
+    branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+    if [ -n "$branch" ]; then
+        local git_status=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ')
+        if [ "$git_status" -gt 0 ]; then
+            echo "%{$fg_bold[green]%}git:(%{$fg_bold[yellow]%}$branch%{$fg_bold[green]%})%{$fg_bold[green]%}±$git_status%{$reset_color%}"
+        else
+            echo "%{$fg_bold[green]%}git:(%{$fg_bold[yellow]%}$branch%{$fg_bold[green]%})%{$reset_color%}"
+        fi
+    fi
+}
+
+# Function to show host if remote
+show_remote_host() {
+    if [[ $SSH_CONNECTION ]]; then
+        echo "%{$fg_bold[green]%}%n@%m%{$reset_color%} "
+    fi
+}
+
+show_pipenv_env_name() {
+    if [[ -n "$PIPENV_ACTIVE" ]]; then
+        # Extracting the environment name from the current directory name or Pipfile location
+        local env_name=$(basename "$(pipenv --venv 2>/dev/null)" 2>/dev/null)
+        echo "%{$fg_bold[blue]%}($env_name)%{$reset_color%} "
+    fi
+}
+
+# Custom PS1 prompt including newline
+PROMPT='$(show_pipenv_env_name)$(show_remote_host)%{$fg_bold[magenta]%}%~%{$reset_color%} $(git_prompt_info)
+'
+
+zle_highlight=(default:bold)

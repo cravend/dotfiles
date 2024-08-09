@@ -14,7 +14,7 @@ Several aspects are automatically installed via submodules, but a few manual req
 
 - [`zsh`](https://www.zsh.org) — My default shell
 - [`nvim`](https://github.com/neovim/neovim) — I didn't make my nvim config backwards compatible (vim-plug is automatically installed)
-- [`exa`](https://github.com/ogham/exa) — Adds some pretty colors compared to `ls`
+- [`eza`](https://github.com/ogham/eza) — Adds some pretty colors compared to `ls`
 - [`nerdfonts`](https://www.nerdfonts.com) — I use Anonymice for the custom icons
 
 ## Installation

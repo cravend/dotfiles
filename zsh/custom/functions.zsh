@@ -1,2 +1,7 @@
-function chpwd() { exa }
-function timemachinethrottle() { sudo sysctl "debug.lowpri_throttle_enabled=$1"  }
+function chpwd() {
+  eza
+}
+
+function timemachinethrottle() {
+  sudo sysctl "debug.lowpri_throttle_enabled=$1"
+}
