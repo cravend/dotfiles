@@ -13,3 +13,6 @@
 [submodule "zsh/custom/plugins/zsh-z"]
 	path = zsh/custom/plugins/zsh-z
 	url = https://github.com/agkozak/zsh-z
+[submodule "zsh/custom/plugins/zsh-autosuggestions"]
+	path = zsh/custom/plugins/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
