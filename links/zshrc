@@ -71,6 +71,12 @@ git_prompt_info() {
         else
             echo "%{$fg_bold[green]%}git:(%{$fg_bold[yellow]%}$branch%{$fg_bold[green]%})%{$reset_color%}"
         fi
+    else
+        # Show commit hash if in a headless state
+        local commit_hash=$(git rev-parse --short HEAD 2>/dev/null)
+        if [ -n "$commit_hash" ]; then
+            echo "%{$fg_bold[green]%}git:(%{$fg_bold[red]%}detached@$commit_hash%{$fg_bold[green]%})%{$reset_color%}"
+        fi
     fi
 }
 
