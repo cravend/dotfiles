@@ -10,6 +10,8 @@ The script should do this: \(ai.prompt)</string>
 	<integer>16384</integer>
 	<key>AiModel</key>
 	<string>gpt-3.5-turbo</string>
+	<key>AllowClipboardAccess</key>
+	<false/>
 	<key>CopySelection</key>
 	<false/>
 	<key>Custom Color Presets</key>
@@ -1081,6 +1083,8 @@ The script should do this: \(ai.prompt)</string>
 	<false/>
 	<key>EnableDivisionView</key>
 	<false/>
+	<key>EnterCopyModeAutomatically</key>
+	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -1226,7 +1230,7 @@ The script should do this: \(ai.prompt)</string>
 			<key>AWDS Window Directory</key>
 			<string></string>
 			<key>AWDS Window Option</key>
-			<string>Recycle</string>
+			<string>No</string>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -2033,11 +2037,11 @@ The script should do this: \(ai.prompt)</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.7686274509803922</real>
+				<real>0.0</real>
 				<key>Color Space</key>
-				<string>P3</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.55686274509803924</real>
+				<real>0.0</real>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
@@ -2949,9 +2953,9 @@ The script should do this: \(ai.prompt)</string>
 	<key>TabsHaveCloseButton</key>
 	<false/>
 	<key>TerminalMargin</key>
-	<integer>30</integer>
+	<integer>0</integer>
 	<key>TerminalVMargin</key>
-	<integer>15</integer>
+	<integer>0</integer>
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Codecierge</string>

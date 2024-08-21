@@ -95,8 +95,13 @@ show_pipenv_env_name() {
     fi
 }
 
+show_command_status() {
+    echo " %(?.$fg[green]⏺.$fg[red]⏺) "
+}
+
+export ITERM2_SQUELCH_MARK=1
 # Custom PS1 prompt including newline
-PROMPT='$(show_pipenv_env_name)$(show_remote_host)%{$fg_bold[magenta]%}%~%{$reset_color%} $(git_prompt_info)
+PROMPT='$(show_command_status)$(show_pipenv_env_name)$(show_remote_host)%{$fg_bold[magenta]%}%~%{$reset_color%} $(git_prompt_info)
 '
 
 zle_highlight=(default:bold)
