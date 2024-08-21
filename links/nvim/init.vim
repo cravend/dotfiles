@@ -1,45 +1,33 @@
 let mapleader = ","
 
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'github/copilot.vim'
+Plug '/opt/homebrew/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-fugitive'
-Plug 'preservim/nerdcommenter'
-Plug 'https://github.com/github/copilot.vim'
 call plug#end()
-
-let base16colorspace=256
 
 exec 'source' . stdpath('config') . '/defaults.vim'
 exec 'source' . stdpath('config') . '/coc.vim'
 exec 'source' . stdpath('config') . '/airline.vim'
 
-" Buffer maps
-nnoremap <leader>1 1<C-6>
-nnoremap <leader>2 2<C-6>
-nnoremap <leader>3 3<C-6>
-nnoremap <leader>4 4<C-6>
-nnoremap bb  :bfirst<CR>
-nnoremap bn  :enew<CR>
-nnoremap bq  :bp <BAR> bd #<CR>
-nnoremap bl  :ls<CR>
-nnoremap b[  :bprevious<CR>
-nnoremap b]  :bnext<CR>
+colorscheme vim
+
+" Other helpful key mappings
+nnoremap <C-s> :w<CR>            " Save with Ctrl+s
+inoremap <C-s> <Esc>:w<CR>a      " Save in insert mode with Ctrl+s
+nnoremap <C-q> :q<CR>            " Quit with Ctrl+q
+inoremap <C-q> <Esc>:q<CR>       " Quit in insert mode with Ctrl+q
+
 
 " Directory view
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
-" NERD Commenter
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-map ,/ <plug>NERDCommenterToggle
+" Key mappings for search and replace
+nnoremap <C-f> /
+nnoremap <C-r> :%s/
 
-
-" Search
-map <C-f> /
-map <C-r> :%s/
-
+autocmd VimLeave * set guicursor= | call chansend(v:stderr, "\x1b[ q")
