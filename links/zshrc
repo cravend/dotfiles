@@ -46,8 +46,6 @@ fi
 export EDITOR=nvim
 
 export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 export ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
 
 # Turn on ZSH
