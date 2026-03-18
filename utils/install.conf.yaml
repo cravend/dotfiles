@@ -6,6 +6,7 @@
 
 - create:
     - ~/Library/Application Support/Cursor/User
+    - ~/.config/gh
 
 - link:
     ~/.zshrc: links/zshrc
@@ -25,10 +26,7 @@
       force: true
 
 - shell:
-    - command: command -v brew >/dev/null 2>&1 || NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-      description: Installing Homebrew
-      quiet: true
-    - command: eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)" 2>/dev/null; eval "$(/usr/local/bin/brew shellenv 2>/dev/null)" 2>/dev/null; brew install eza fzf gh neovim
+    - command: command -v brew >/dev/null 2>&1 && (eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)" 2>/dev/null; eval "$(/usr/local/bin/brew shellenv 2>/dev/null)" 2>/dev/null; brew install eza fzf gh neovim)
       description: Installing eza, fzf, gh, neovim
       quiet: true
     - command: test -d ~/.bun || curl -fsSL https://bun.sh/install | bash

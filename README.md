@@ -12,6 +12,7 @@ These are my personal dotfiles. I use a combination of git submodules & symlinks
 
 Several aspects are automatically installed via submodules, but a few manual requirements still exist:
 
+- [Homebrew](https://brew.sh) — Install before running the install script: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 - [`zsh`](https://www.zsh.org) — My default shell
 - [`nvim`](https://github.com/neovim/neovim) — I didn't make my nvim config backwards compatible (vim-plug is automatically installed)
 - [`eza`](https://github.com/ogham/eza) — Adds some pretty colors compared to `ls`
@@ -20,6 +21,7 @@ Several aspects are automatically installed via submodules, but a few manual req
 ## Installation
 
 - clone repository
+- install Homebrew (see Requirements)
 - run [`./utils/install`](utils/install)
 - run `:PlugInstall` inside nvim
 - done
