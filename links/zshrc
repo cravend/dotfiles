@@ -9,10 +9,6 @@ ZSH_THEME="cravend"
 
 ZSH_COMPDUMP="${ZSH_CACHE_DIR}/.zcompdump-${HOST/.*/}-${ZSH_VERSION}"
 
-# Autodark Configuration -- must be loaded before plugin
-AUTODARK_LIGHT_THEME="tomorrow"
-AUTODARK_DARK_THEME="tomorrow-night-eighties"
-
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"

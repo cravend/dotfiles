@@ -41,5 +41,4 @@ If you previously had a symlink at `~/Library/Preferences/com.googlecode.iterm2.
 These dotfiles are pretty fine-tuned to my needs, but there's no reason why you can't use them as a starting point for your own! I would recommend changing the following options:
 
 - [`links/gitconfig`](links/gitconfig) — replace your details in the [user] section
-- [`links/zshrc`](links/zshrc) — update the `ZSH_THEME`, `AUTODARK_LIGHT_THEME`, and `AUTODARK_DARK_THEME` accordingly
-  - I take advantage of [autodark](https://github.com/cravend/autodark) to manage my base16-shell colors, you should too ;)
+- [`links/zshrc`](links/zshrc) — update the `ZSH_THEME` accordingly
