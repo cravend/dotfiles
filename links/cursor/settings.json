@@ -93,5 +93,8 @@
     ".env.local": "properties"
   },
   "githubPullRequests.pullBranch": "never",
-  "window.title": "${activeRepositoryBranchName}${separator}${rootName}"
+  "window.title": "${activeRepositoryBranchName}${separator}${rootName}",
+  "remote.SSH.remotePlatform": {
+    "work": "macOS"
+  }
 }
