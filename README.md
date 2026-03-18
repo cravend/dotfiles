@@ -26,6 +26,16 @@ Several aspects are automatically installed via submodules, but a few manual req
 - run `:PlugInstall` inside nvim
 - done
 
+### Manual Configuration
+
+**iTerm2** — Preferences are stored in `links/com.googlecode.iterm2.plist` but are not symlinked. Configure iTerm2 to load from this folder:
+
+1. Open **iTerm2** → **Settings** (⌘,) → **General**
+2. Under **Preferences**, enable **Load preferences from a custom folder or URL**
+3. Set the path to `~/.dotfiles/links` (or the absolute path to your `links` folder)
+
+If you previously had a symlink at `~/Library/Preferences/com.googlecode.iterm2.plist`, remove it first: `rm ~/Library/Preferences/com.googlecode.iterm2.plist`
+
 ### Things You Should Change
 
 These dotfiles are pretty fine-tuned to my needs, but there's no reason why you can't use them as a starting point for your own! I would recommend changing the following options:

@@ -21,9 +21,6 @@
     ~/.config/gh/config.yml:
       path: links/gh/config.yml
       force: true
-    ~/Library/Preferences/com.googlecode.iterm2.plist:
-      path: links/com.googlecode.iterm2.plist
-      force: true
 
 - shell:
     - command: command -v brew >/dev/null 2>&1 && (eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)" 2>/dev/null; eval "$(/usr/local/bin/brew shellenv 2>/dev/null)" 2>/dev/null; brew install eza fzf gh neovim)

@@ -12,11 +12,11 @@ prefer_editor_prompt: disabled
 pager:
 # Aliases allow you to create nicknames for gh commands
 aliases:
-  co: pr checkout
-  pr go: pr view --web
-  go: repo view --web
-  pr watch: pr checks --watch --fail-fast
-  submit: pr create -f --title @coderabbitai
+    co: pr checkout
+    pr go: pr view --web
+    go: repo view --web
+    pr watch: pr checks --watch --fail-fast
+    submit: pr create -f --title @coderabbitai
 # The path to a unix socket through which to send HTTP connections. If blank, HTTP traffic will be handled by net/http.DefaultTransport.
 http_unix_socket:
 # What web browser gh should use when opening URLs. If blank, will refer to environment.
