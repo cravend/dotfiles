@@ -115,3 +115,14 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Sync dotfiles: pull if behind, commit & push if local changes (runs in background)
+if [[ -o interactive ]] && [[ -z "$CURSOR_AGENT" ]]; then
+  (cd ~/.dotfiles && git fetch origin -q 2>/dev/null && \
+    ([ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main 2>/dev/null)" ] 2>/dev/null && \
+      git pull --rebase --autostash -q && \
+      git submodule update --init --recursive -q && \
+      ./utils/install); \
+    [ -n "$(git status --porcelain)" ] && \
+    git add -A && git commit -m "sync" -q && git push -q) &!
+fi
