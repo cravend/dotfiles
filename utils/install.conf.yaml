@@ -4,12 +4,39 @@
 
 - clean: ["~"]
 
+- create:
+    - ~/Library/Application Support/Cursor/User
+
 - link:
     ~/.zshrc: links/zshrc
     ~/.gitconfig: links/gitconfig
     ~/.config/nvim: links/nvim
+    ~/Library/Application Support/Cursor/User/settings.json:
+      path: links/cursor/settings.json
+      force: true
+    ~/Library/Application Support/Cursor/User/keybindings.json:
+      path: links/cursor/keybindings.json
+      force: true
+    ~/.config/gh/config.yml:
+      path: links/gh/config.yml
+      force: true
+    ~/Library/Preferences/com.googlecode.iterm2.plist:
+      path: links/com.googlecode.iterm2.plist
+      force: true
 
 - shell:
+    - command: command -v brew >/dev/null 2>&1 || NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      description: Installing Homebrew
+      quiet: true
+    - command: eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)" 2>/dev/null; eval "$(/usr/local/bin/brew shellenv 2>/dev/null)" 2>/dev/null; brew install eza fzf gh neovim
+      description: Installing eza, fzf, gh, neovim
+      quiet: true
+    - command: test -d ~/.bun || curl -fsSL https://bun.sh/install | bash
+      description: Installing bun
+      quiet: true
+    - command: test -d ~/.nvm || PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash'
+      description: Installing nvm
+      quiet: true
     - command: git submodule update --init --recursive
       description: Installing submodules
       quiet: true

@@ -1,4 +1,5 @@
 function chpwd() {
+  [[ -n "$CURSOR_AGENT" ]] && return
   eza
 }
 
