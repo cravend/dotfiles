@@ -41,3 +41,10 @@ dock-unlock() {
   defaults write com.apple.Dock contents-immutable -bool false
   killall Dock
 }
+
+gbm() {
+  git branch --merged --format='%(refname:short)' \
+    | grep -v -E '^(main|master|dev)$' \
+    | grep -v -Fx "$(git branch --show-current)" \
+    | xargs -I {} git branch -d {}
+}
