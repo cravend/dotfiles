@@ -97,4 +97,6 @@
   "remote.SSH.remotePlatform": {
     "work": "macOS"
   },
+  "json.schemaDownload.enable": true,
+ 
 }
