@@ -83,7 +83,7 @@
   "crashReporting.enabled": "off",
   "workbench.layoutControl.enabled": false,
   "cursor.composer.shouldAutoAcceptDiffs": false,
-  "oxc.fixKind": "all",
+  "oxc.fixKind": "dangerous_fix_or_suggestion",
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
     "source.removeUnusedImports": "explicit",
@@ -96,5 +96,5 @@
   "window.title": "${activeRepositoryBranchName}${separator}${rootName}",
   "remote.SSH.remotePlatform": {
     "work": "macOS"
-  }
+  },
 }
