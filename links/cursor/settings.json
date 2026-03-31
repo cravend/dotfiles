@@ -94,7 +94,8 @@
   "githubPullRequests.pullBranch": "never",
   "window.title": "${activeRepositoryBranchName}${separator}${rootName}",
   "remote.SSH.remotePlatform": {
-    "work": "macOS"
+    "work": "macOS",
+    "work-tailscale": "macOS"
   },
   "json.schemaDownload.enable": true,
  
