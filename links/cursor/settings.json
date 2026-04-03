@@ -98,5 +98,6 @@
     "work-tailscale": "macOS"
   },
   "json.schemaDownload.enable": true,
+  "cursor.general.glassShowWarningNotifications": true,
  
 }
