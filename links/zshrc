@@ -127,3 +127,4 @@ if [[ -o interactive ]] && [[ -z "$CURSOR_AGENT" ]]; then
     [ -n "$(git status --porcelain)" ] && \
     git add -A && git commit -m "sync" -q && git push -q) &!
 fi
+export PATH="$HOME/.local/bin:$PATH"
