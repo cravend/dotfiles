@@ -100,5 +100,6 @@
   "json.schemaDownload.enable": true,
   "cursor.general.glassShowWarningNotifications": true,
   "explorer.confirmDelete": false,
+  "cursor.general.fontSmoothingAntialiased": true,
  
 }
