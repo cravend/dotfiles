@@ -101,5 +101,6 @@
   "cursor.general.glassShowWarningNotifications": true,
   "explorer.confirmDelete": false,
   "cursor.general.fontSmoothingAntialiased": true,
+  "cursor.inlineDiff.enablePerformanceProtection": false,
  
 }
