@@ -95,7 +95,8 @@
   "window.title": "${activeRepositoryBranchName}${separator}${rootName}",
   "remote.SSH.remotePlatform": {
     "work": "macOS",
-    "work-tailscale": "macOS"
+    "work-tailscale": "macOS",
+    "laptop": "macOS"
   },
   "json.schemaDownload.enable": true,
   "cursor.general.glassShowWarningNotifications": true,
