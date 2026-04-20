@@ -103,5 +103,6 @@
   "explorer.confirmDelete": false,
   "cursor.general.fontSmoothingAntialiased": true,
   "cursor.inlineDiff.enablePerformanceProtection": false,
+  "git.replaceTagsWhenPull": true,
  
 }
