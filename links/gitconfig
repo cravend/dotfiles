@@ -23,3 +23,5 @@
 [user]
 	name = Dalton Craven
 	email = 7117993+cravend@users.noreply.github.com
+[fetch]
+	pruneTags = true
