@@ -104,5 +104,5 @@
   "cursor.general.fontSmoothingAntialiased": true,
   "cursor.inlineDiff.enablePerformanceProtection": false,
   "git.replaceTagsWhenPull": true,
- 
+  "workbench.agentsWindowButton.enabled": false,
 }
