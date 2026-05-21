@@ -105,4 +105,5 @@
   "cursor.inlineDiff.enablePerformanceProtection": false,
   "git.replaceTagsWhenPull": true,
   "workbench.agentsWindowButton.enabled": false,
+  "cursor.composer.conversationDensity": "compact-ungrouped",
 }
