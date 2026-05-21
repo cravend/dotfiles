@@ -2004,7 +2004,7 @@
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>PromptOnQuitEvenIfThereAreNoWindows</key>
-	<true/>
+	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>SavePasteHistory</key>
