@@ -128,3 +128,7 @@ if [[ -o interactive ]] && [[ -z "$CURSOR_AGENT" ]]; then
     git add -A && git commit -m "sync" -q && git push -q) &!
 fi
 export PATH="$HOME/.local/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
