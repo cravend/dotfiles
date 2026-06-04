@@ -105,4 +105,5 @@
   "workbench.agentsWindowButton.enabled": false,
   "workbench.preferredLightColorTheme": "GitHub Light",
   "cursor.composer.usageSummaryDisplay": "always",
+  "cursor.composer.conversationDensity": "detailed",
 }
