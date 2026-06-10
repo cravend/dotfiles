@@ -48,3 +48,13 @@ gbm() {
     | grep -v -Fx "$(git branch --show-current)" \
     | xargs -I {} git branch -d {}
 }
+
+kill-port() {
+  local pids
+  pids=$(lsof -ti :"$1")
+  if [[ -z "$pids" ]]; then
+    echo "Nothing listening on port $1" >&2
+    return 1
+  fi
+  echo "$pids" | xargs kill -9
+}
