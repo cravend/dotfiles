@@ -1,5 +1,6 @@
 alias ls="eza -F -a"
 alias vim="nvim"
+alias kp=kill-port
 
 # Git
 alias gca="git commit --amend"

@@ -53,8 +53,8 @@ kill-port() {
   local pids
   pids=$(lsof -ti :"$1")
   if [[ -z "$pids" ]]; then
-    echo "Nothing listening on port $1" >&2
-    return 1
+    echo "Nothing listening on port $1"
+    return 0
   fi
   echo "$pids" | xargs kill -9
 }
