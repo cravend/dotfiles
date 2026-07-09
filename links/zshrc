@@ -136,3 +136,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
 export PATH="$HOME/bin:$PATH"
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
