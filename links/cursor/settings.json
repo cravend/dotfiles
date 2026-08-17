@@ -106,4 +106,5 @@
   "workbench.preferredLightColorTheme": "GitHub Light",
   "cursor.composer.usageSummaryDisplay": "always",
   "cursor.general.emailPrivacyEnabled": true,
+  "cursor.composer.conversationDensity": "detailed",
 }
