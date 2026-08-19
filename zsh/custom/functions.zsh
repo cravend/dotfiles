@@ -58,3 +58,39 @@ kill-port() {
   fi
   echo "$pids" | xargs kill -9
 }
+
+# Clipboard → ~/Downloads/<name>.md, verify, then copy the path.
+# Usage: clipmd [name]   (unnamed files use a 6-char content hash)
+clipmd() {
+  local name dest
+  if [[ -n "$1" ]]; then
+    name="${1:t}"
+    name="${name%.md}"
+  else
+    name="$(pbpaste | shasum -a 256 | cut -c1-6)"
+  fi
+  dest="$HOME/Downloads/${name}.md"
+
+  if ! pbpaste > "$dest"; then
+    echo "Failed to write $dest" >&2
+    return 1
+  fi
+
+  if [[ ! -s "$dest" ]]; then
+    echo "Clipboard is empty" >&2
+    rm -f "$dest"
+    return 1
+  fi
+
+  if ! cmp -s "$dest" <(pbpaste); then
+    echo "Paste check failed: $dest does not match clipboard" >&2
+    return 1
+  fi
+
+  echo "Wrote $dest ($(wc -l < "$dest" | tr -d ' ') lines)" >&2
+  head -n 10 "$dest" >&2
+  echo >&2
+
+  print -r -- "$dest" | pbcopy
+  print -r -- "$dest"
+}
