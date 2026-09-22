@@ -42,7 +42,6 @@
   ],
   "css.lint.unknownAtRules": "ignore",
   "tailwindCSS.lint.suggestCanonicalClasses": "ignore",
-  "cursor.composer.queueMessageDefaultBehavior": "queue",
   "cursor.terminal.usePreviewBox": true,
   "diffEditor.renderSideBySide": true,
   "diffEditor.useInlineViewWhenSpaceIsLimited": false,
@@ -107,4 +106,5 @@
   "cursor.composer.usageSummaryDisplay": "always",
   "cursor.general.emailPrivacyEnabled": true,
   "cursor.composer.conversationDensity": "compact-ungrouped",
+  "cursor.composer.queueManualSendBehavior2": "steer",
 }
