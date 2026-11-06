@@ -105,6 +105,6 @@
   "workbench.preferredLightColorTheme": "GitHub Light",
   "cursor.composer.usageSummaryDisplay": "always",
   "cursor.general.emailPrivacyEnabled": true,
-  "cursor.composer.conversationDensity": "compact-ungrouped",
   "cursor.composer.queueManualSendBehavior2": "steer",
+  "cursor.chatMaxWidth": 1140,
 }
