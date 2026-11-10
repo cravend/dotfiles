@@ -106,5 +106,5 @@
   "cursor.composer.usageSummaryDisplay": "always",
   "cursor.general.emailPrivacyEnabled": true,
   "cursor.composer.queueManualSendBehavior2": "steer",
-  "cursor.chatMaxWidth": 1140,
+  "cursor.chatMaxWidth": 900,
 }
