@@ -103,7 +103,7 @@
   "git.replaceTagsWhenPull": true,
   "workbench.agentsWindowButton.enabled": false,
   "workbench.preferredLightColorTheme": "GitHub Light",
-  "cursor.composer.usageSummaryDisplay": "always",
+  "cursor.composer.usageSummaryDisplay": "never",
   "cursor.general.emailPrivacyEnabled": true,
   "cursor.composer.queueManualSendBehavior2": "steer",
   "cursor.chatMaxWidth": 900,
